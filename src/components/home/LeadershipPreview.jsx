@@ -1,4 +1,5 @@
 import { UserRound } from "lucide-react";
+import ComingSoonButton from "@/components/ui/ComingSoonButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { executives } from "@/data/executives";
 
@@ -62,14 +63,12 @@ export default function LeadershipPreview() {
             Current NAPOSA executive records are structured for official
             portraits, profiles and contact details when supplied.
           </SectionHeading>
-          <button
-            type="button"
-            disabled
-            className="inline-flex min-h-11 shrink-0 cursor-not-allowed items-center justify-center whitespace-nowrap rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-muted"
-            aria-label="View all executives coming soon"
+          <ComingSoonButton
+            className="shrink-0"
+            ariaLabel="View all executives page coming soon"
           >
             View All Executives
-          </button>
+          </ComingSoonButton>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">

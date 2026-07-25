@@ -7,7 +7,7 @@ export const site = {
   location: "Agona Nsaba, Central Region, Ghana",
   headmaster: "Rev. Osafo-Amankwah",
   logo: "/images/naposa/naposa-logo.jpg",
-  canonicalUrl: "https://example.com",
+  canonicalUrl: "https://www.naposa.org",
   developerCredit: {
     name: "Velttech",
     url: "https://velttech.org",

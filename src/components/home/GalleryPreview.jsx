@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import ComingSoonButton from "@/components/ui/ComingSoonButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { gallery } from "@/data/gallery";
 
@@ -15,9 +15,12 @@ export default function GalleryPreview() {
             Supplied images are arranged in an editorial grid and can be
             replaced as official media becomes available.
           </SectionHeading>
-          <Button href="#contact" variant="outline" className="shrink-0">
+          <ComingSoonButton
+            className="shrink-0"
+            ariaLabel="Full gallery page coming soon"
+          >
             View Full Gallery
-          </Button>
+          </ComingSoonButton>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-4">
           {gallery.map((item, index) => (

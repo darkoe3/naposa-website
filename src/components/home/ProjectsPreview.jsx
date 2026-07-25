@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ComingSoonButton from "@/components/ui/ComingSoonButton";
 import PlaceholderBadge from "@/components/ui/PlaceholderBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { projects } from "@/data/projects";
@@ -15,14 +16,12 @@ export default function ProjectsPreview() {
             Our projects will transform alumni commitment into lasting support
             for students, the school and the wider NAPOSA community.
           </SectionHeading>
-          <button
-            type="button"
-            disabled
-            className="inline-flex min-h-11 shrink-0 cursor-not-allowed items-center justify-center whitespace-nowrap rounded-md border border-line bg-white px-5 py-3 text-sm font-semibold text-muted"
-            aria-label="View all projects coming soon"
+          <ComingSoonButton
+            className="shrink-0"
+            ariaLabel="View all projects page coming soon"
           >
             View All Projects
-          </button>
+          </ComingSoonButton>
         </div>
         <p className="mt-6 rounded-md border border-line bg-white px-4 py-3 text-sm text-muted">
           The project areas below are provisional examples and will be replaced

@@ -1,5 +1,5 @@
 import { Award, HeartHandshake, Link2, Sparkles } from "lucide-react";
-import Button from "@/components/ui/Button";
+import ComingSoonButton from "@/components/ui/ComingSoonButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const values = [
@@ -60,9 +60,12 @@ export default function AboutPreview() {
             Value statements are provisional and will be aligned with the
             official NAPOSA Constitution.
           </p>
-          <Button href="#contact" variant="outline" className="mt-7">
+          <ComingSoonButton
+            className="mt-7"
+            ariaLabel="Discover NAPOSA page coming soon"
+          >
             Discover NAPOSA
-          </Button>
+          </ComingSoonButton>
         </div>
       </div>
     </section>

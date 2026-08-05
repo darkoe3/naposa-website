@@ -15,14 +15,14 @@ export const site = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Leadership", href: "#leadership" },
-  { label: "Membership", href: "#membership" },
-  { label: "News & Events", href: "#news" },
-  { label: "Projects", href: "#projects" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "Membership", href: "/#membership" },
+  { label: "News & Events", href: "/#news" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const contactPlaceholders = [

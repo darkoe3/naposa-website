@@ -50,7 +50,7 @@ function ExecutiveCard({ executive, prominent = false }) {
 
 export default function LeadershipPreview() {
   const [president, ...others] = executives;
-  const preview = others.slice(0, 5);
+  const preview = others.slice(0, 7);
 
   return (
     <section id="leadership" className="bg-white py-16 md:py-20 lg:py-24">

@@ -1,5 +1,5 @@
 import { Award, HeartHandshake, Link2, Sparkles } from "lucide-react";
-import ComingSoonButton from "@/components/ui/ComingSoonButton";
+import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const values = [
@@ -37,9 +37,11 @@ export default function AboutPreview() {
           eyebrow="About NAPOSA"
           title="Rooted in Service, United by Purpose."
         >
-          NAPOSA brings together past students of Nsaba Presbyterian Senior High
-          School to sustain lifelong relationships, support the school and
-          create meaningful opportunities for current and future generations.
+          NAPOSA brings together past students of Nsaba Presbyterian Training
+          College, Nsaba Presbyterian Secondary School and Nsaba Presbyterian
+          Senior High School to sustain lifelong relationships, support the
+          school and create meaningful opportunities for current and future
+          generations.
         </SectionHeading>
         <div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -60,12 +62,14 @@ export default function AboutPreview() {
             Value statements are provisional and will be aligned with the
             official NAPOSA Constitution.
           </p>
-          <ComingSoonButton
+          <Button
+            href="/about"
+            variant="outline"
             className="mt-7"
-            ariaLabel="Discover NAPOSA page coming soon"
+            aria-label="Discover NAPOSA"
           >
             Discover NAPOSA
-          </ComingSoonButton>
+          </Button>
         </div>
       </div>
     </section>

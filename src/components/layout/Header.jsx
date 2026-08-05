@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-white/96 backdrop-blur">
       <div className="section-shell flex min-h-[72px] items-center justify-between gap-4">
         <Link
-          href="#home"
+          href="/"
           className="flex min-w-0 flex-1 items-center gap-3 min-[1180px]:flex-none"
           onClick={closeMenu}
           aria-label="NAPOSA home"
@@ -65,7 +65,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden min-[1180px]:block">
-          <Button href="#membership" className="px-4 py-2.5">
+          <Button href="/#membership" className="px-4 py-2.5">
             Join NAPOSA
           </Button>
         </div>
@@ -126,7 +126,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button href="#membership" className="mt-4 w-full" onClick={closeMenu}>
+              <Button href="/#membership" className="mt-4 w-full" onClick={closeMenu}>
                 Join NAPOSA
               </Button>
             </nav>

@@ -49,7 +49,7 @@ export const executives = [
   },
   {
     fullName: "Mr. Eugene Akuffo Okae",
-    position: "Organizing Secretary",
+    position: "Organizer",
     photograph: null,
     shortProfile: null,
     contact: null,
@@ -57,7 +57,7 @@ export const executives = [
   },
   {
     fullName: "Mr. Evans Nartey",
-    position: "Deputy Organizing Secretary",
+    position: "Assistant Organizer",
     photograph: null,
     shortProfile: null,
     contact: null,

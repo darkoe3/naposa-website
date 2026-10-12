@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 const aboutTitle = "About NAPOSA | Nsaba Presbyterian Old Students Association";
 const aboutDescription =
-  "Learn about NAPOSA and the history of Nsaba Presbyterian Senior High School, established in Agona Nsaba in 1962.";
+  "Discover NAPOSA's history, from its founding in 2005 to the generations of alumni who continue to strengthen its legacy.";
 const socialImageUrl = "/images/naposa/naposa-social-card.png";
 
 const identities = [
@@ -16,17 +16,19 @@ const identities = [
 
 const timeline = [
   {
-    year: "1962",
-    milestone: "Established as an all-male Teacher Training College",
+    year: "2005",
+    milestone:
+      "NAPOSA was established and formally registered at the Office of the Registrar General in Accra.",
   },
   {
-    year: "1972",
-    milestone: "Transitioned into a mixed-gender secondary school",
+    year: "2018",
+    milestone:
+      "Rev. Dr Kwabena Aboagye of the 1978 year group took over the Association's leadership.",
   },
   {
     year: "Today",
     milestone:
-      "Nsaba Presbyterian Senior High School continues its academic, moral and faith-based mission",
+      "Members across generations continue to sustain NAPOSA's shared identity and connection.",
   },
 ];
 
@@ -188,24 +190,85 @@ export default function AboutPage() {
                 Our History
               </p>
               <h2 className="font-heading text-3xl font-bold leading-tight text-navy md:text-5xl">
-                Our History
+                One School. One Bond. A Legacy That Lives On.
               </h2>
-              <p className="mt-5 text-base leading-8 text-muted md:text-lg">
-                Nsaba Presbyterian Senior High School, located in Agona Nsaba
-                within the Central Region of Ghana, began in 1962 as an all-male
-                Teacher Training College before transitioning into a
-                mixed-gender secondary school in 1972. Rooted deeply in the
-                mission and vision of the Presbyterian Church of Ghana, the
-                institution goes beyond academics to shape students into
-                disciplined, morally upright, and God-fearing leaders of
-                integrity. By integrating spiritual guidance with a robust
-                curriculum spanning General Arts, Business, General Science, and
-                Home Economics, the school fosters critical thinking, effective
-                communication, and strong relationship-building. This
-                faith-based foundation drives its ongoing commitment to
-                producing well-rounded citizens equipped to serve society with
-                distinction.
-              </p>
+              <div className="mt-5 space-y-5 text-base leading-8 text-muted md:text-lg">
+                <p>
+                  Every great story begins with someone who dares to take the
+                  first step. For NAPOSA, that step was taken by{" "}
+                  <strong className="font-bold text-ink">
+                    Mr Jackson Amarteifio
+                  </strong>
+                  , a proud member of the 1998 year group, whose vision and
+                  initiative laid the foundation for what the Association would
+                  become. Recognising that the friendships, shared experiences
+                  and memories forged within the walls of our alma mater
+                  deserved to live on beyond the school years, Mr Amarteifio and
+                  some of his year group mates took the initiative to establish
+                  and formally register the Association at the Office of the
+                  Registrar General (ORC) in Accra in 2005. Alongside his team,
+                  he nurtured its early growth, bringing old students together
+                  and creating a platform through which the spirit of belonging
+                  could be sustained. Under their leadership, a committee was
+                  set up to draft the Association&apos;s constitution.
+                </p>
+                <p>
+                  After establishing its foundations and guiding its initial
+                  journey, the founding leadership eventually handed over the
+                  mantle to{" "}
+                  <strong className="font-bold text-ink">
+                    Dr Agnes Adwoa Anima
+                  </strong>
+                  , supported by{" "}
+                  <strong className="font-bold text-ink">
+                    Mr Michael Addai
+                  </strong>
+                  , both of the 1997 year group, who would lead the Association
+                  for the next decade. For ten years, that mantle represented
+                  more than leadership; it represented a responsibility to
+                  preserve the original vision, strengthen the bonds among
+                  members and keep the Association moving forward. It was a
+                  decade of stewardship, commitment, and building on the work of
+                  those who came before. In 2018, the mantle was handed over to{" "}
+                  <strong className="font-bold text-ink">
+                    Rev. Dr Kwabena Aboagye
+                  </strong>{" "}
+                  of the 1978 year group to steer the Association&apos;s
+                  affairs. Rev. Dr Aboagye was the first Senior Prefect of our
+                  alma mater.
+                </p>
+                <p>
+                  Through the collective efforts of members such as{" "}
+                  <strong className="font-bold text-ink">
+                    Rev. Melody Atta-Poku, Mr Ebenezer Asiedu (1990), Mr Albert
+                    Okyere (1994), Mrs Nina Asiedu (1994), Dr Amponsah Tawiah
+                    (1990), and Mrs Annabella Adjei (2000)
+                  </strong>
+                  , the Association continued its journey, demonstrating that
+                  its strength lay not in any one individual, but in the shared
+                  identity and enduring connection of its members.
+                </p>
+                <p>
+                  Today, our story stands as a testament to the power of
+                  continuity. From the initiative of one old student to the
+                  dedication of successive leadership and the participation of
+                  members across different year groups, the Association remains
+                  a reminder that leaving school does not mean leaving the
+                  community behind. We are connected by more than the classrooms
+                  we once occupied or the memories we share. We are connected by
+                  a common heritage, a collective identity and the opportunity
+                  to make a difference together.
+                </p>
+                <p>
+                  As we look to the future, we honour those who started the
+                  journey, celebrate those who have sustained it and welcome
+                  those who will carry it forward.
+                </p>
+                <p className="font-bold text-navy">
+                  Our history is our foundation. Our unity is our strength. Our
+                  future is ours to build. Osompa Yɛ!
+                </p>
+              </div>
             </div>
 
             <div className="rounded-md border border-line bg-white p-5 shadow-sm sm:p-6">

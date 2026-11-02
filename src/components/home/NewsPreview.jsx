@@ -1,7 +1,9 @@
 import { CalendarDays } from "lucide-react";
-import Image from "next/image";
+import AnniversarySlideshow from "@/components/news/AnniversarySlideshow";
+import Button from "@/components/ui/Button";
 import PlaceholderBadge from "@/components/ui/PlaceholderBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { anniversaryPhotos } from "@/data/anniversary";
 import { newsItems } from "@/data/projects";
 
 export default function NewsPreview() {
@@ -22,21 +24,14 @@ export default function NewsPreview() {
               <article key={item.title} className="min-w-0 rounded-md border border-line bg-white p-4 shadow-sm sm:p-6 md:col-span-2">
                 <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-8">
                   <div className="min-w-0">
-                    <Image
-                      src={item.flyer}
-                      alt="Programme flyer for the launching of Nsaba Presbyterian Senior High School’s 65th Anniversary Celebration from 29 October to 1 November 2026"
-                      width={1254}
-                      height={1254}
-                      sizes="(min-width: 1240px) 555px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 640px) calc(100vw - 82px), calc(100vw - 66px)"
-                      className="h-auto w-full rounded-md border border-line object-contain"
-                    />
+                    <AnniversarySlideshow slides={anniversaryPhotos} />
                     <a
                       href={item.flyer}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex min-h-11 items-center rounded-md px-3 py-2 text-sm font-bold text-royal underline underline-offset-4 hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-royal"
                     >
-                      View Full Programme<span className="sr-only"> (opens in a new tab)</span>
+                      View Anniversary Programme<span className="sr-only"> (opens in a new tab)</span>
                     </a>
                   </div>
                   <div className="min-w-0">
@@ -46,6 +41,7 @@ export default function NewsPreview() {
                     <p className="mt-2 font-bold text-navy">{item.period}</p>
                     <p className="mt-4 leading-7 text-ink"><span className="font-bold">Theme: </span>{item.theme}</p>
                     <p className="mt-4 text-sm leading-6 text-ink">{item.description}</p>
+                    <Button href={item.href} className="mt-5">View Launch Highlights</Button>
                     <h4 className="mt-5 font-bold text-navy">Programme</h4>
                     <ul className="mt-3 space-y-3 text-sm leading-6 text-ink">
                       {item.programme.map((entry) => (

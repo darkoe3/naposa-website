@@ -42,13 +42,14 @@ export const projects = [
 
 export const newsItems = [
   {
-    title: "Launching of the 65th Anniversary Celebration",
+    title: "Nsaba Presbyterian SHS Launches Its 65th Anniversary Celebration",
     organiser: "Nsaba Presbyterian Senior High School",
-    category: "Upcoming Event",
+    category: "Anniversary Launch",
     period: "29 October to 1 November 2026",
     theme: "Celebrating 65 Years of Academic Excellence Through Godly Stewardship",
     description:
-      "Nsaba Presbyterian Senior High School invites alumni, students, staff and friends of the school to the launching of its 65th Anniversary Celebration. The four-day programme includes a clean-up exercise, float, official anniversary launch and thanksgiving service.",
+      "View highlights from the official launch and the unveiling of an alumni-supported open bath-house facility.",
+    href: "/news/65th-anniversary-launch",
     flyer: "/images/events/nsaba-presby-65th-anniversary-launch.jpeg",
     programme: [
       { date: "2026-10-29", label: "Thursday, 29 October 2026", activity: "Clean-up Exercise" },

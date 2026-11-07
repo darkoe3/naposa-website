@@ -3,16 +3,37 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navLinks, site } from "@/data/site";
 import Button from "@/components/ui/Button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuTriggerRef = useRef(null);
 
   useEffect(() => {
+    if (typeof document === "undefined") return undefined;
+
     document.body.classList.toggle("menu-open", isOpen);
+    if (!isOpen) {
+      menuTriggerRef.current?.focus();
+    }
+
     return () => document.body.classList.remove("menu-open");
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen || typeof document === "undefined") return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
@@ -71,6 +92,7 @@ export default function Header() {
         </div>
 
         <button
+          ref={menuTriggerRef}
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-line text-navy min-[1180px]:hidden"
           aria-label="Open menu"

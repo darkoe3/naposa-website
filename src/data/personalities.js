@@ -4,22 +4,129 @@ export const personalities = [
     name: "Rev. Dr. Kwabena Aboagye",
     title: "Celebrating Rev. Dr. Kwabena Aboagye",
     subtitle:
-      "Honouring a remarkable servant leader and mentor on his special day.",
+      "Honouring a dedicated servant of God, educator, missionary, administrator, and inspirational leader on his birthday.",
     type: "birthday",
     badge: "Birthday Tribute",
+    birthday: "7th November 1956",
+    placeOfBirth: "Agona Swedru, Ghana",
+    hometown:
+      "Kwahu Aduamoa, Kwahu East District, Eastern Region, Ghana",
     images: [
       {
         src: "/images/personality/dr_aboagye_1.jpeg",
-        alt: "Rev. Dr. Kwabena Aboagye",
+        alt: "Rev. Dr. Kwabena Aboagye, honoured NAPOSA personality",
       },
       {
         src: "/images/personality/dr_aboagye_2.jpeg",
-        alt: "Rev. Dr. Kwabena Aboagye",
+        alt: "A second portrait of Rev. Dr. Kwabena Aboagye",
       },
     ],
     birthdayMessage:
-      "Today, the NAPOSA community celebrates Rev. Dr. Kwabena Aboagye with gratitude and warm wishes. May the year ahead bring continued joy and fulfilment.",
-    achievements: [],
+      "With gratitude and warm wishes, the NAPOSA community celebrates a life devoted to faith, education, leadership, and service.",
+    biography: [
+      "Rev. Dr. Kwabena Aboagye was born in Agona Swedru on 7th November 1956 and hails from Kwahu Aduamoa in the Kwahu East District of the Eastern Region of Ghana.",
+      "His educational journey began at Presbyterian Primary School, Pepease Kwahu, and continued at Ayalolo Middle Boys’ School. He later attended Presbyterian Secondary School, Agona Nsaba, where he made history as the school's first Senior Prefect.",
+      "His quest for academic excellence led him to Kwadaso Agricultural College in Kumasi and subsequently to the University of Science and Technology (now Kwame Nkrumah University of Science and Technology), where he obtained a Bachelor of Arts (Honours) degree. He further pursued postgraduate studies at the University of Port Elizabeth (now Nelson Mandela Metropolitan University), South Africa, earning an MPhil degree.",
+      "His theological formation took place at Trinity Theological Seminary, Legon, where he obtained a Diploma in Theology. He later earned a Doctor of Ministry (D.Min.) degree from New York Theological Seminary.",
+    ],
+    education: [
+      {
+        title: "Presbyterian Primary School",
+        detail: "Pepease Kwahu",
+      },
+      {
+        title: "Ayalolo Middle Boys’ School",
+        detail: "Continued his foundational education.",
+      },
+      {
+        title: "Presbyterian Secondary School",
+        detail:
+          "Agona Nsaba; became the school's first Senior Prefect.",
+      },
+      {
+        title: "Kwadaso Agricultural College",
+        detail: "Kumasi.",
+      },
+      {
+        title: "University of Science and Technology",
+        detail:
+          "Now Kwame Nkrumah University of Science and Technology; Bachelor of Arts (Honours).",
+      },
+      {
+        title: "University of Port Elizabeth",
+        detail:
+          "Now Nelson Mandela Metropolitan University, South Africa; MPhil.",
+      },
+      {
+        title: "Trinity Theological Seminary",
+        detail: "Legon; Diploma in Theology.",
+      },
+      {
+        title: "New York Theological Seminary",
+        detail: "Doctor of Ministry (D.Min.).",
+      },
+    ],
+    ministry: [
+      {
+        date: "26 June 1985",
+        title: "Commissioned into ministry",
+        detail:
+          "Commissioned into the ministry of the Presbyterian Church of Ghana at the Presbyterian Church, Teshie, Accra.",
+      },
+      {
+        date: "28 June 1987",
+        title: "Ordained",
+        detail: "Ordained at the Presbyterian Church, Berekum.",
+      },
+    ],
+    appointments: [
+      "Technical Officer, Ministry of Agriculture Extension Division, Akosombo",
+      "Chaplain, Presbyterian Secondary School, Bechem",
+      "Second Minister, Sunyani",
+      "Project Director, Nakpanduri Agricultural Rehabilitation Centre for the Blind, Northern Region",
+      "District Minister, Bolgatanga",
+      "District Minister, Effiduase",
+      "District Minister, Akyem Swedru",
+      "Presbytery Clerk, West Akyem Presbytery",
+      "District Minister, Kyebi",
+      "District Minister, Nkwatia Kwahu",
+      "Minister-in-Charge, Presbyterian Congregation Kokomlemle",
+      "Minister-in-Charge, Ebenezer Congregation Mamprobi",
+      "Minister-in-Charge, Ebenezer Congregation Pepease Kwahu",
+      "Missionary to the Moravian Churches in Southern Africa, Port Elizabeth",
+      "Co-worker, Association of Churches and Missions in Southwest Germany, Stuttgart",
+      "Coordinating Minister, Accra Ridge Church, Accra",
+      "Senior Minister-in-Residence, Ramseyer Training Centre, Abetifi Kwahu",
+    ],
+    service: [
+      "Acting President of NAPOSA",
+      "Board Member of Nsaba Presbyterian Senior High School",
+      "Mentored generations of students, church leaders, and professionals",
+      "Promoted Christian education, leadership development, and community engagement",
+      "Supported mission work in Ghana and abroad",
+    ],
+    family: {
+      spouse: "Mrs. Jacqueline Lorraine Aboagye",
+      children: [
+        "Dr. Nana Kwabena Aboagye",
+        "Nana Kwabena Opoku Aboagye",
+        "Papa Kwaku Mensah Effah Aboagye",
+        "Owura Kofi Anane Asante Aboagye",
+      ],
+    },
+    retirement: "30th September 2026",
+    statistics: [
+      {
+        value: "41",
+        label: "Years in ministry",
+        detail: "From commissioning in 1985 to retirement in 2026",
+      },
+      {
+        value: "17",
+        label: "Appointments and roles",
+        detail: "Across church, education, agriculture, and mission",
+      },
+    ],
   },
   {
     slug: "john-peter-dunn",

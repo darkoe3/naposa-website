@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import styles from "./PersonalityGallery.module.css";
 
-export default function PersonalityGallery({ name, images }) {
+export default function PersonalityGallery({ name, images, birthday = false }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeImage = images[activeIndex];
   const count = images.length;
@@ -18,6 +19,18 @@ export default function PersonalityGallery({ name, images }) {
       role="region"
       aria-label={`${name} photo gallery`}
       aria-roledescription="carousel"
+      onKeyDown={birthday ? (event) => {
+        if (event.altKey || event.ctrlKey || event.metaKey) return;
+        const destinations = {
+          ArrowLeft: activeIndex - 1,
+          ArrowRight: activeIndex + 1,
+          Home: 0,
+          End: count - 1,
+        };
+        if (!(event.key in destinations)) return;
+        event.preventDefault();
+        showImage(destinations[event.key]);
+      } : undefined}
     >
       <figure>
         <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-cream">
@@ -26,8 +39,10 @@ export default function PersonalityGallery({ name, images }) {
             src={activeImage.src}
             alt={activeImage.alt}
             fill
+            loading={birthday ? (activeIndex === 0 ? "eager" : "lazy") : undefined}
+            fetchPriority={birthday && activeIndex === 0 ? "high" : undefined}
             sizes="(min-width: 1024px) 560px, (min-width: 640px) 70vw, calc(100vw - 56px)"
-            className="object-contain transition-transform duration-500 motion-safe:hover:scale-[1.02]"
+            className={`object-contain transition-transform duration-500 motion-safe:hover:scale-[1.02]${birthday ? ` ${styles.image}` : ""}`}
           />
         </div>
         <figcaption className="sr-only">

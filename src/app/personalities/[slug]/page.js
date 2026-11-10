@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import BirthdayProfile from "@/components/personalities/BirthdayProfile";
 import PersonalityGallery from "@/components/personalities/PersonalityGallery";
 import ShareButtons from "@/components/personalities/ShareButtons";
 import { personalities } from "@/data/personalities";
@@ -42,44 +43,6 @@ export async function generateMetadata({ params }) {
       images: [personality.images[0].src],
     },
   };
-}
-
-function BirthdayContent({ personality }) {
-  return (
-    <div className="space-y-6">
-      <section className="rounded-lg border border-naposaGold/40 bg-gradient-to-br from-cream via-white to-[#fff6da] p-6 sm:p-8">
-        <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-royal">
-          <span aria-hidden="true">✦</span> A birthday message
-        </div>
-        <p className="mt-4 text-base leading-8 text-ink sm:text-lg">
-          {personality.birthdayMessage}
-        </p>
-      </section>
-
-      <section
-        aria-labelledby="achievements-heading"
-        className="rounded-lg border border-line bg-white p-6 sm:p-8"
-      >
-        <h2
-          id="achievements-heading"
-          className="font-heading text-2xl font-bold text-navy sm:text-3xl"
-        >
-          A life of service
-        </h2>
-        {personality.achievements.length > 0 ? (
-          <ul className="mt-4 list-disc space-y-3 pl-5 text-base leading-7 text-ink marker:text-naposaGold">
-            {personality.achievements.map((achievement) => (
-              <li key={achievement}>{achievement}</li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-3 text-base leading-7 text-muted">
-            Achievements and additional tributes will be added to this profile.
-          </p>
-        )}
-      </section>
-    </div>
-  );
 }
 
 function MemorialContent({ personality }) {
@@ -128,18 +91,14 @@ export default async function PersonalityPage({ params }) {
   const personality = findPersonality(slug);
   if (!personality) notFound();
 
-  const isBirthday = personality.type === "birthday";
+  if (personality.type === "birthday") {
+    return <BirthdayProfile personality={personality} />;
+  }
 
   return (
     <main>
       <article>
-        <header
-          className={`py-8 text-white sm:py-10 ${
-            isBirthday
-              ? "bg-gradient-to-br from-navy via-royal to-[#7a4d16]"
-              : "bg-navy"
-          }`}
-        >
+        <header className="bg-navy py-8 text-white sm:py-10">
           <div className="section-shell">
             <nav aria-label="Breadcrumb" className="text-sm text-white/75">
               <ol className="flex flex-wrap items-center gap-2">
@@ -163,20 +122,9 @@ export default async function PersonalityPage({ params }) {
                 </li>
               </ol>
             </nav>
-            <span
-              className={`mt-7 inline-flex rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] ${
-                isBirthday
-                  ? "bg-naposaGold text-navy"
-                  : "border border-white/30 bg-white/10 text-white"
-              }`}
-            >
+            <span className="mt-7 inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white">
               {personality.badge}
             </span>
-            {isBirthday ? (
-              <p className="mt-5 font-heading text-3xl font-bold text-naposaGold sm:text-4xl">
-                Happy Birthday
-              </p>
-            ) : null}
             <h1 className="mt-3 max-w-4xl font-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               {personality.title}
             </h1>
@@ -186,11 +134,7 @@ export default async function PersonalityPage({ params }) {
           </div>
         </header>
 
-        <div
-          className={`py-8 md:py-12 ${
-            isBirthday ? "bg-[#fffdf8]" : "bg-[#f7f7f5]"
-          }`}
-        >
+        <div className="bg-[#f7f7f5] py-8 md:py-12">
           <div className="section-shell">
             <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10">
               <PersonalityGallery
@@ -198,17 +142,13 @@ export default async function PersonalityPage({ params }) {
                 images={personality.images}
               />
               <div className="min-w-0">
-                {isBirthday ? (
-                  <BirthdayContent personality={personality} />
-                ) : (
-                  <MemorialContent personality={personality} />
-                )}
+                <MemorialContent personality={personality} />
               </div>
             </div>
             <div className="mt-8 flex flex-col gap-5 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="font-heading text-xl font-bold text-navy">
-                  Share this {isBirthday ? "birthday tribute" : "remembrance"}
+                  Share this remembrance
                 </h2>
                 <div className="mt-3">
                   <ShareButtons
